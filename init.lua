@@ -31,6 +31,15 @@ vim.opt.undolevels = 10000
 vim.opt.undofile = true
 
 -- Pack
+vim.api.nvim_create_autocmd("PackChanged", {
+  group = vim.api.nvim_create_augroup("TreesitterUpdate", { clear = true }),
+  callback = function(event)
+    if event.data.spec.name == "nvim-treesitter" and event.data.kind == "update" then
+      require("nvim-treesitter").update()
+    end
+  end,
+})
+
 vim.pack.add({
   "https://github.com/folke/tokyonight.nvim",
   "https://github.com/folke/which-key.nvim",
@@ -38,10 +47,26 @@ vim.pack.add({
   "https://github.com/folke/flash.nvim",
   "https://github.com/ibhagwan/fzf-lua",
   "https://github.com/neovim/nvim-lspconfig",
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
   { src = "https://github.com/Saghen/blink.cmp", version = "v1" },
 })
 
 vim.cmd.colorscheme("tokyonight-night")
+
+-- Treesitter highlighting; install the initial parsers when the CLI is available.
+if vim.fn.executable("tree-sitter") == 1 then
+  require("nvim-treesitter").install({ "lua", "vim", "vimdoc", "query", "bash", "json", "markdown", "markdown_inline" })
+end
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = vim.api.nvim_create_augroup("TreesitterHighlight", { clear = true }),
+  callback = function(event)
+    local lang = vim.treesitter.language.get_lang(vim.bo[event.buf].filetype)
+    if lang and vim.treesitter.language.add(lang) then
+      vim.treesitter.start(event.buf, lang)
+    end
+  end,
+})
 
 -- Keybinding hints
 require("which-key").setup({

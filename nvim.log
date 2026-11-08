@@ -8,3 +8,7 @@ WRN 2026-11-07T22:32:22.441 ?.2        server_start:197: Failed to start server:
 WRN 2026-11-07T22:38:09.000 ?.2        server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
 WRN 2026-11-07T22:52:36.705 ?.2        server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
 WRN 2026-11-07T22:53:52.784 ?.2        server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
+WRN 2026-11-08T09:19:29.325 ?.3        server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.3.0
+WRN 2026-11-08T09:19:35.612 ?.2        server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
+WRN 2026-11-08T09:27:17.549 ?.2        server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
+WRN 2026-11-08T09:28:58.622 ?.2        server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
