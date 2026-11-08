@@ -2,6 +2,8 @@
 
 Uses Neovim's built-in `vim.pack` package manager and `vim.lsp.config` APIs.
 
+See [Keyboard shortcuts](KEYBINDINGS.md) for configured mappings and plugin controls.
+
 - `init.lua`: entry point and startup order.
 - `lua/config/options.lua`: editor options and leader key.
 - `lua/config/keymaps.lua`: general editing and buffer mappings.
