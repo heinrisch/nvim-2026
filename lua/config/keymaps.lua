@@ -14,3 +14,7 @@ end, { desc = "Save and close buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>update | bdelete<CR>", {
   desc = "Save and close buffer",
 })
+
+vim.keymap.set("n", "<leader>bq", "<cmd>bdelete!<CR>", {
+  desc = "Close buffer without saving",
+})
