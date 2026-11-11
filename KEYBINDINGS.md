@@ -19,6 +19,8 @@ built-in reference. Plugin defaults reflect the locally installed versions.
 | --- | --- | --- |
 | `H` | Normal | Previous buffer. |
 | `L` | Normal | Next buffer. |
+| `Space b n` | Normal | Next buffer. |
+| `Space b p` | Normal | Previous buffer. |
 | `Space b d` | Normal | Save if modified, then close the buffer. |
 | `D-s` | Normal, Insert, Visual | Leave Insert mode, save, then close the buffer. |
 | `Space` | Insert | Insert a space and start a new undo block. |
@@ -133,6 +135,7 @@ Blink's default command-line preset applies when editing commands and searches.
 | --- | --- | --- |
 | `Space z` | Normal, Visual | Open the ZMA command menu; Visual mode provides the selection to applicable actions. |
 | `Space l w` | Normal, Visual | Wrap selected text as a wiki link `[[text]]`, or use clipboard text in Normal mode. |
+| `Space l p` | Normal, Visual | Wrap selected text as a person link `@[text]`, or use clipboard text in Normal mode. |
 | `Tab` / `Ctrl-n` | Insert, ZMA completion menu | Select the first / next suggestion. |
 | `Ctrl-p` | Insert, ZMA completion menu | Select the previous suggestion. |
 | `Ctrl-y` | Insert, ZMA completion menu | Accept the suggestion. |

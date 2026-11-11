@@ -4,6 +4,8 @@ vim.keymap.set("i", "<Space>", "<C-g>u<Space>")
 -- Buffer navigation
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>")
 vim.keymap.set("n", "<S-l>", ":bnext<CR>")
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 
 vim.keymap.set({ "n", "i", "x" }, "<D-s>", function()
   vim.cmd.stopinsert()
