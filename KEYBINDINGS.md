@@ -132,6 +132,7 @@ Blink's default command-line preset applies when editing commands and searches.
 | Shortcut | Mode / context | Action |
 | --- | --- | --- |
 | `Space z` | Normal, Visual | Open the ZMA command menu; Visual mode provides the selection to applicable actions. |
+| `Space l w` | Normal, Visual | Wrap selected text as a wiki link `[[text]]`, or use clipboard text in Normal mode. |
 | `Tab` / `Ctrl-n` | Insert, ZMA completion menu | Select the first / next suggestion. |
 | `Ctrl-p` | Insert, ZMA completion menu | Select the previous suggestion. |
 | `Ctrl-y` | Insert, ZMA completion menu | Accept the suggestion. |
